@@ -1,0 +1,16 @@
+name: SARS-CoV-2-Consensus_v1
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bwa=0.7.17
+  - samtools=1.14
+  - bedtools=2.30.0
+  - bcftools=1.14
+  - gatk4=4.2.4.0
+  - mafft=7.490
+  - snp-sites=2.5.1
+  - picard=2.26.11
+  - fastp=0.23.2
+  - python=2.7

@@ -1,0 +1,11 @@
+function accept(rec) {
+  //Only mapped reads were kept
+  if (rec.getReadUnmappedFlag()) return false;
+  //Mapping quality should be larger than 0
+  //MPXV specific ITR (bwa mapping quality equal 0)
+  if (rec.getMappingQuality() < 0) return false;
+  //aligned proportion > 80%
+  a = rec.getAlignmentBlocks()
+  return a[0].getLength() / rec.getReadLength() > 0.8;
+}
+accept(record);
